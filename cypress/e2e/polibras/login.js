@@ -7,7 +7,7 @@ describe("Login in both Polibras pages", () => {
           cy.visit('http://localhost:3000/v8#/login/auth');
           cy.get('#tenant').type('P111');
           cy.get('#login').type('lucas.araujo@polibrasnet.com.br');
-          cy.get('#password').type('Desventura24');
+          cy.get('#password').type('XXXXXXXXXXXXXXXX');
           cy.get('.ant-form-item-control-input-content > .ant-btn').click();
           cy.wait(10000);
         });
