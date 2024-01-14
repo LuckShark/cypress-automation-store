@@ -13,7 +13,16 @@ describe("Verifyng variables, cypress commands and jquery commands", () => {
 
         //RECOMMENDED APPROACH
         cy.get("a[href*='product/category&path=']").contains("Makeup").click()
-        cy.get("a[href*='product/category&path=']").contains("Skincare").click()
+ //       cy.get("a[href*='product/category&path=']").contains("Skincare").click()
+
+        // O CÓDIGO VAI FALHAR
+ //     const header = cy.get("h1 .maintext"); //pega todos os h1 que tem uma classe (.) com 'maintext' escrito
+   //   cy.log(header.text()) //.text() é um comando jquery -> VAI FALHAR O TESTE
+
+        cy.get("h1 .maintext").then(($headerText) => { //usei o cyget para localizar o header; depois usei o then para colocar ele no próximo bloco de código
+            const headerText = $headerText.text() //criei uma constante e usei um comando jquery para extrair o texto
+            cy.log("Found header text: " + headerText) //só pra confirmar que funcionou, usei o cy.log para mostrar o texto
+        })
 
     });
 })
