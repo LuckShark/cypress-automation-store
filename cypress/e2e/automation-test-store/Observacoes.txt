@@ -1,0 +1,4 @@
+## EXPLICAÇÃO DA FORMAÇÃO DE ALGUNS SELETORES ##
+
+1. cy.contains('#ContactUsFrm', 'Contact Us Form')
+ache um ID chamado X e veja que ele tem o texto Y.
