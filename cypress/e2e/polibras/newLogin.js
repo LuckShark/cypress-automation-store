@@ -3,7 +3,7 @@
 describe("Login in Polibras new Web for Roteirizze", () => {
 
     it('Acesso fácil via API', () => {
-        cy.apiLogin();  // Chama o comando personalizado apiLogin
+        cy.apiLogin();  // Chama o comando personalizado apiLogin // JÁ RETIRADO do commands.js
 
         // Você pode adicionar mais comandos Cypress aqui, se necessário
         cy.log('Comando Cypress adicional');
